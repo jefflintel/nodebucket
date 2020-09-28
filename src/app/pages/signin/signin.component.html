@@ -1,0 +1,29 @@
+<div fxLayout='column'>
+
+  <div fxFlex *ngIf="error">
+    {{ error }}
+  </div>
+  <div *ngIf="form.controls['empId'].errors && form.controls['empId'].touched">
+    <div>
+      Employee Id must be a numeric value
+    </div>
+  </div>
+  <mat-card>
+    <mat-card-title>Employee Sign-in Page</mat-card-title>
+    <mat-card-subtitle>You must enter a valid employee Id to proceed
+
+    </mat-card-subtitle>
+    <form [formGroup]='form' (ngSubmit)="login(); form.reset();">
+      <mat-card-content>
+        <mat-form-field>
+          <input matInput [formControl]="form.controls['empId']" placeholder="Employee Id">
+
+        </mat-form-field>
+
+      </mat-card-content>
+      <mat-card-actions align="end">
+        <button type="submit" fxFlex mat-raised-button color="primary" [disabled]="!form.valid">Validate</button>
+      </mat-card-actions>
+    </form>
+  </mat-card>
+</div>
