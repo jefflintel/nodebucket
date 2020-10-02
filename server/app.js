@@ -18,6 +18,7 @@ const path = require('path');
 const mongoose = require('mongoose');
 const { response } = require('express');
 const Employee = require('./models/employee');
+const EmployeeApi = require('./routes/employee-api')
 
 /**
  * App configurations
@@ -56,9 +57,11 @@ mongoose.connect(conn, {
  * API(s) go here...
  */
 
+ app.use('/api/employees', EmployeeApi)
+
  //suffix captures empId value from route http://localhost:3000/api/employees/1007
  //req.params.empId is the parameter passed from the route
- app.get('/api/employees/:empId', async(req, res) => {
+/* app.get('/api/employees/:empId', async(req, res) => {
   try {
     //use mongoose employeemondel to query mongodb atlas by empId
     Employee.findOne({ 'empId': req.params.empId }, function(err, employee) {
@@ -81,7 +84,7 @@ mongoose.connect(conn, {
       'message': 'Internal server error!'
     })
   }
- })
+ })*/
 
 /**
  * Create and start server
