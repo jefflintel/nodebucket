@@ -8,7 +8,7 @@
 
 
 const express = require('express');
-const employee = require('../models/employee');
+//const employee = require('../models/employee');
 const Employee = require('../models/employee');
 const BaseResponse = require('../services/base-response');
 const ErrorResponse = require('../services/error-response')
@@ -39,14 +39,6 @@ router.get('/:empId', async(req, res) => {
     })
   }
  })
-
- /* class EmployeeResponse {
-   constructor(message, statusCode, errorMessage) {
-     this.message = message;
-     this.statusCode = statusCode;
-     this.errorMessage = errorMessage
-   }
- }*/
 
  //find all tasks for an employee
 router.get('/:empId/tasks', async(req, res) => {
@@ -80,7 +72,7 @@ router.post('/:empId/tasks', async(req, res) => {
       if(err) {
         console.log(err);
         const createTaskMongoDbError = new ErrorResponse('500', 'Internal server error', err);
-        res.status(500).send()
+        res.status(500).send(createTaskMongoDbError.toObject());
       } else {
         const item = {
           text: req.body.text

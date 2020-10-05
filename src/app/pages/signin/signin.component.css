@@ -1,0 +1,14 @@
+.signin-form {
+  background-color: #c88719;
+  margin-top: 33vh;
+  margin-left: 25vw;
+  width: 50vw;
+}
+
+.signin-error {
+  background-color: #c88719 !important;
+}
+
+button {
+  background-color: #aed581;
+}
