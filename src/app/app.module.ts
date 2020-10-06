@@ -27,6 +27,9 @@ import { MatCardModule } from '@angular/material/card';
 import { MatInputModule } from '@angular/material/input';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
+import { NotFoundComponent } from './pages/not-found/not-found.component';
+import { MatDividerModule } from '@angular/material/divider';
+import { DragDropModule } from '@angular/cdk/drag-drop';
 
 
 @NgModule({
@@ -35,7 +38,8 @@ import { MatSnackBarModule } from '@angular/material/snack-bar';
     HomeComponent,
     BaseLayoutComponent,
     AuthLayoutComponent,
-    SigninComponent
+    SigninComponent,
+    NotFoundComponent
   ],
   imports: [
     BrowserModule,
@@ -51,7 +55,8 @@ import { MatSnackBarModule } from '@angular/material/snack-bar';
     MatCardModule,
     MatInputModule,
     MatFormFieldModule,
-    MatSnackBarModule
+    MatSnackBarModule,
+    MatDividerModule
   ],
   providers: [],
   bootstrap: [AppComponent]

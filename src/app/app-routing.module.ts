@@ -14,6 +14,9 @@ import { Routes, RouterModule } from '@angular/router';
 import { AuthGuard } from './shared/auth.guard';
 import { AuthLayoutComponent } from './shared/auth-layout/auth-layout.component';
 import { SigninComponent } from './pages/signin/signin.component';
+import { NotFoundComponent } from './pages/not-found/not-found.component';
+
+
 
 const routes: Routes = [
   {
@@ -34,8 +37,16 @@ const routes: Routes = [
       {
         path: 'signin',
         component: SigninComponent
-      }
+      },
+      {
+        path: 'not-found',
+        component: NotFoundComponent
+      },
     ]
+  },
+  {
+    path: '**',
+    redirectTo: 'session/not-found'
   }
 ];
 

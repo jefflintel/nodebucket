@@ -1,14 +1,14 @@
 <div fxLayout='column'>
 
   <div fxFlex *ngIf="error">
-    {{error}}
+    {{ error }}
   </div>
-  <div *ngIf="form.controls['empId'].errors && form.controls['empId'].touched " >
+  <div *ngIf="form.controls['empId'].errors && form.controls['empId'].touched">
     <div>
       Employee Id must be a numeric value
     </div>
   </div>
-  <mat-card class="signin-form">
+  <mat-card>
     <mat-card-title>Employee Sign-in Page</mat-card-title>
     <mat-card-subtitle>You must enter a valid employee Id to proceed
 
@@ -22,7 +22,7 @@
 
       </mat-card-content>
       <mat-card-actions align="end">
-        <button type="submit" fxFlex mat-raised-button [disabled]="!form.valid">Validate</button>
+        <button type="submit" fxFlex mat-raised-button color="primary" [disabled]="!form.valid">Validate</button>
       </mat-card-actions>
     </form>
   </mat-card>
