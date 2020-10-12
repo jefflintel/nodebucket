@@ -1,0 +1,17 @@
+mat-card {
+  min-height: 480px;
+  margin-top: 64px;
+}
+
+.outside {
+  background-color: #ffb74d;
+}
+
+.middle {
+  background-color: #c88719;
+}
+
+.about-container {
+  width: 90%;
+  margin: 0 auto;
+}

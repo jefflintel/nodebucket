@@ -1,16 +1,17 @@
-<div fxLayout="column">
+<div fxLayout="column" >
 
     <!-- navigation -->
     <nav fxFlex>
-      <mat-toolbar>
+      <mat-toolbar color="primary" fxLayout="row wrap" fxLayoutAlign="space-evenly">
         <!-- navbar container -->
         <div class="navbar-container">
           <!-- logo -->
-          <button class="logo" routerLink="/" mat-button>nodebucket</button>
+          <button fxFlex class="logo" routerLink="/" mat-button>n<span class="material-icons" color="accent">add_task</span>debucket</button>
 
-          <button class="navbar-link" routerLink="/" mat-button>Home</button>
-          <button class="navbar-link" mat-button>About</button>
-         
+          <button fxFlex class="navbar-link" routerLink="/" mat-button><span class="material-icons">home</span> Home</button>
+          <button fxFlex class="navbar-link" routerLink="/about" mat-button><span class="material-icons">contact_page</span> About</button>
+          <button fxFlex class="navbar-link" mat-button (click)="signOut()"><span class="material-icons">exit_to_app</span> Sign Out</button>
+
         </div>
 
       </mat-toolbar>

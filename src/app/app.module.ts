@@ -30,6 +30,9 @@ import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { NotFoundComponent } from './pages/not-found/not-found.component';
 import { MatDividerModule } from '@angular/material/divider';
 import { DragDropModule } from '@angular/cdk/drag-drop';
+import { AboutComponent } from './pages/about/about.component';
+import { CreateTaskDialogComponent } from './shared/create-task-dialog/create-task-dialog.component';
+import { MatDialogModule } from '@angular/material/dialog'
 
 
 @NgModule({
@@ -39,7 +42,9 @@ import { DragDropModule } from '@angular/cdk/drag-drop';
     BaseLayoutComponent,
     AuthLayoutComponent,
     SigninComponent,
-    NotFoundComponent
+    NotFoundComponent,
+    AboutComponent,
+    CreateTaskDialogComponent
   ],
   imports: [
     BrowserModule,
@@ -56,7 +61,9 @@ import { DragDropModule } from '@angular/cdk/drag-drop';
     MatInputModule,
     MatFormFieldModule,
     MatSnackBarModule,
-    MatDividerModule
+    MatDividerModule,
+    DragDropModule,
+    MatDialogModule
   ],
   providers: [],
   bootstrap: [AppComponent]

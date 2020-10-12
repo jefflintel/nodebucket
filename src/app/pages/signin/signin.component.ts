@@ -42,20 +42,15 @@ export class SigninComponent implements OnInit {
         this.cookieService.set('session_user', empId, 1); //set employee id to the cookie, session_user name
         this.router.navigate(['/']);
       } else {
-        //this.error = 'The employee Id you entered is invalid. Please try again.'
-        /*let config = new MatSnackBarConfig();
-        config.verticalPosition = 'bottom';
-        config.horizontalPosition = 'center';
-        config.duration = 3000;
-        config.addExtraClass = ['signin-error'];*/
+
         this.snackBar.open(`${empId} is an invalid employee Id. Please try again`, 'Uh-oh!', {
           duration: 300000, //deliberately long for screenshot purposes
           horizontalPosition: 'center',
           verticalPosition: 'bottom',
           panelClass: 'signin-error'
-        })
+        });
       }
-    })
+    });
   }
 
   showInvalidEmpIdSnackbar() {

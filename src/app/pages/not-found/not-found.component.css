@@ -1,0 +1,26 @@
+h1 {
+  font-size: 480px;
+  text-align: center;
+}
+
+mat-card-content {
+  min-height: 480px;
+}
+
+.not-found-container {
+  margin-top: 5%;
+}
+
+.outside {
+  background-color: #ffb74d;
+}
+
+.middle {
+  background-color: #c88719;
+}
+
+.not-found-explanation {
+  background-color: #c88719;
+  margin-top: 32px;
+  padding: 8px;
+}

@@ -3,12 +3,12 @@
   <div fxFlex *ngIf="error">
     {{ error }}
   </div>
-  <div *ngIf="form.controls['empId'].errors && form.controls['empId'].touched">
+  <div class="numeric-warning" *ngIf="form.controls['empId'].errors && form.controls['empId'].touched" >
     <div>
-      Employee Id must be a numeric value
+      <p>Employee Id must be a numeric value</p>
     </div>
   </div>
-  <mat-card>
+  <mat-card class="mat-elevation-z8 signin-form" color="secondary">
     <mat-card-title>Employee Sign-in Page</mat-card-title>
     <mat-card-subtitle>You must enter a valid employee Id to proceed
 

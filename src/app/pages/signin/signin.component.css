@@ -5,10 +5,11 @@
   width: 50vw;
 }
 
-.signin-error {
-  background-color: #c88719 !important;
-}
-
 button {
   background-color: #aed581;
+}
+
+.numeric-warning {
+  margin: 0 auto;
+  color: red;
 }
