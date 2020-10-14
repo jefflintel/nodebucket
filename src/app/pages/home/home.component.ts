@@ -112,7 +112,7 @@ export class HomeComponent implements OnInit {
 
   deleteTask(taskId: string) {
     if(taskId) {
-      console.log(`Task item" ${taskId} was deleted`);
+      console.log(`Task item ${taskId} was deleted`);
 
       this.taskService.deleteTask(this.empId, taskId).subscribe(res => {
         this.employee = res.data;

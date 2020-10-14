@@ -183,8 +183,8 @@ router.delete('/:empId/tasks/:taskId', async(req, res) => {
     })
   } catch(e) {
     console.log(e);
-    const deteleTaskCatchErrorResponse = new ErrorResponse('500', 'Internal server error', e.message);
-    res.status(500).send(deteleTaskCatchErrorResponse.toObject());
+    const deleteTaskCatchErrorResponse = new ErrorResponse('500', 'Internal server error', e.message);
+    res.status(500).send(deleteTaskCatchErrorResponse.toObject());
   }
 })
 
