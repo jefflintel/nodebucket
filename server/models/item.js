@@ -10,6 +10,7 @@
 const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
+//task items only have one field 
 let itemSchema = new Schema({
   text: { type: String }
 });
