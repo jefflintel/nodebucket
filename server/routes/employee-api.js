@@ -64,7 +64,6 @@ router.get('/:empId/tasks', async(req, res) => {
 })
 
 //create a new task
-
 router.post('/:empId/tasks', async(req, res) => {
   try {
 
