@@ -1,6 +1,6 @@
 <div fxLayout='column'>
 
-  <div fxFlex *ngIf="error">
+  <div fxFlex *ngIf="error" class ="text-warning">
     {{ error }}
   </div>
   <div class="numeric-warning" *ngIf="form.controls['empId'].errors && form.controls['empId'].touched" >

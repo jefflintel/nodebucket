@@ -9,7 +9,8 @@ button {
   background-color: #aed581;
 }
 
-.numeric-warning {
+.numeric-warning, .text-warning {
   margin: 0 auto;
   color: red;
+  font-size: 1.5em;
 }

@@ -25,7 +25,6 @@ import { MatDialog } from '@angular/material/dialog';
 })
 export class HomeComponent implements OnInit {
 
-  //tasks: any;
   todo: Item[]; //or Array<Item> (not best practice)
   done: Item[]; //or Array<Item> (not best practice)
   employee: Employee;
@@ -42,11 +41,6 @@ export class HomeComponent implements OnInit {
       this.employee = res.data;
       console.log('-----employee object------')
 
-      //this.todo = res['data'].todo;
-      //this.done = res['data'].done;
-
-      //console.log(this.todo);
-      //console.log(this.done);
     }, err => {
       console.log(err);
     }, () => {
@@ -63,7 +57,6 @@ export class HomeComponent implements OnInit {
   }
 
   drop(event: CdkDragDrop<any[]>) {
-
 
     if(event.previousContainer === event.container) {
       moveItemInArray(event.container.data, event.previousIndex, event.currentIndex);
@@ -105,7 +98,6 @@ export class HomeComponent implements OnInit {
           this.todo = this.employee.todo;
           this.done = this.employee.done;
         })
-
       }
     })
   }
@@ -122,8 +114,6 @@ export class HomeComponent implements OnInit {
         this.todo = this.employee.todo;
         this.done = this.employee.done;
       })
-
-
     }
   }
 }
